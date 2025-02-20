@@ -1,32 +1,30 @@
 # About this repo
 
-Simple python project to show a way to take experiental execution time to compare a set of algorithms (three in this case) in fair way.
+Simple python project that tests some searching in array algorithms, explaining how they work and comparing his complexity and efficiency.
 
-## Twisted Sort
-
-First even then odd sorting algorithms.
-
-### Problem statement
+## Problem statement
 ​
-The sample problem is to take a list of integers with at least one element and sort them with the following criteria:
+The search in array problem tries to locate a specific target element within a given array. The objective is to determine whether the target exists in the array and, if so, return its position or some relevant information about it.
 
-* First it will be the even numbers (those who are divisible by 2 with no reminder), then it will be the odd numbers
-* The even numbers should be sorted in ascending order, and the odd numbers should be sorted in descending order
-* The algorithm will only sort positive numbers
+## Algorithms tested
+
+## Linear Search
+
+Linear Search goes through each element of an array one by one until it finds the target value. It does not assume any order in the array, so every element may need to be checked. 
+
+## Binary Search
+
+Binary Search works on a sorted array. It repeatedly divides the search interval in half by comparing the target value to the middle element of the array.
+
+## Ternary Search
+
+Ternary Search is also applied to sorted arrays and splits the array into three parts by using two midpoints. It determines which of the three segments may contain the target value and continues the search only in that segment.
+
+## Jump Search
+
+Jump Search is designed for sorted arrays. It works by jumping ahead by fixed steps (blocks) instead of checking every element. Once it finds a block where the target could be, it performs a linear search within that block. Each block has a size of √n
 
 ### Examples
-
-* For `3 1 9` the output should be `9 3 1`
-
-* For `1 9 8 2 3 4 5 7 6` the output should be `2 4 6 8 9 7 5 3 1`
-
-* For `8 2 4` the output should be `2 4 8`
-
-* For `10 90 80 20 30 40 50 70 60` the output should be `10 20 30 40 50 60 70 80 90`
-
-* For `11 91 81 21 31 41 51 71 61` the output should be `91 81 71 61 51 41 31 21 11`
-
-* For `11 92 83 24 35 46 57 78 69` the output should be `24 46 78 92 83 69 57 35 11`
 
 
 
@@ -51,14 +49,14 @@ Make sure you have "coverage" in your requirements.txt file and run pip install.
 Name                          Stmts   Miss  Cover
 -------------------------------------------------
 search\__init__.py                0      0   100%
-search\algorithms.py             51      1    98%
+search\algorithms.py             53      1    98%
 search\constants.py               2      0   100%
 search\data_generator.py          9      1    89%
 test\__init__.py                  0      0   100%
 test\test_algorithms.py          30      1    97%
 test\test_data_generator.py      29      1    97%
 -------------------------------------------------
-TOTAL                           121      4    97%
+TOTAL                           123      4    97%
 ```
 
 # Code beautifier
