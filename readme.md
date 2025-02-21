@@ -1,4 +1,4 @@
-# About this repo
+# Searching algorithms
 
 Simple python project that tests some searching in array algorithms, explaining how they work and comparing his complexity and efficiency.
 
@@ -23,10 +23,6 @@ Ternary Search is also applied to sorted arrays and splits the array into three 
 ## Jump Search
 
 Jump Search is designed for sorted arrays. It works by jumping ahead by fixed steps (blocks) instead of checking every element. Once it finds a block where the target could be, it performs a linear search within that block. Each block has a size of √n
-
-### Examples
-
-
 
 # Python version
 Python 3.13.1
